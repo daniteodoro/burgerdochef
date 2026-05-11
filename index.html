@@ -4,70 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Burger do Chef</title>
+
+        <!-- essa página usará style.css -->
+
+    <link rel="stylesheet" href="style.css">
 </head>
 
-<body style="background-color: white;">
+<body >
 
+ 
      <!-- HEADER -->
     <div id="header"></div>
+
+       <img src="images/chef-cozinhando-carne.jpg" alt="">
+
 
   
     <script src="script.js"></script>
 
     <br><br>
 
-        <h2>
-            SURPREENDA quem você <b>AMA</b> com os <b>burgers do Chef!</b>
-        </h2>
-
-        <p>
-            Conheça nosso <b>ESPAÇO FÍSICO</b> ou peça pelo <b>DELIVERY</b>
-        </p>
-
-        <br>
-
-        <table>
-            <tr>
-
-                <td>
-                    <img src="images/batatafrita.jpeg" width="180">
-                </td>
-
-                <td>
-                    <img src="images/cebolascrocantes.jpeg" width="205">
-                </td>
-
-                <td>
-                    <img src="burger2.jpg" width="150">
-                </td>
-
-                <td>
-                    <img src="batata.jpg" width="150">
-                </td>
-
-            </tr>
-        </table>
+        <!-- div agrupa tudo -->
+        <div class="banner">
+    
+            <h2>
+                SURPREENDA quem você <b>AMA</b> com os <b>burgers do Chef!</b>
+            </h2>
+    
+            <p>
+                Conheça nosso <b>ESPAÇO FÍSICO</b> ou peça pelo <b>DELIVERY</b>
+            </p>
+    
+            <br>
+    
+            <table class="banner-imagens">
+                <tr>
+    
+                    <td>
+                        <img src="images/batatafrita.jpeg" width="180">
+                    </td>
+    
+                    <td>
+                        <img src="images/cebolascrocantes.jpeg" width="205">
+                    </td>
+    
+                    <td>
+                        <img src="burger2.jpg" width="150">
+                    </td>
+    
+                    <td>
+                        <img src="batata.jpg" width="150">
+                    </td>
+    
+                </tr>
+            </table >
+        </div>
 
     <br><br>
 
-    <table >
+    <table class="secao-info" >
 
         <tr>
 
-            <!-- FOTO -->
-            <td>
-                <img src="images/loja_espaco_interno.jpeg" width="250">
-            </td>
 
             <!-- TEXTO -->
-            <td>
-
-                <font color="gold">
+            <td class="texto-info">
 
                     <h2>LOJA</h2>
-                </font>
-
-                <font color="black">
 
                     <p>
                         DESCRIÇÃO DA LOJA <br>
@@ -78,8 +81,11 @@
                         DESCRIÇÃO DA LOJA <br>
                     </p>
 
-                </font>
+            </td>
 
+            <!-- FOTO -->
+            <td >
+                <img src="images/loja_espaco_interno.jpeg" width="250">
             </td>
 
         </tr>
@@ -88,24 +94,15 @@
 
       <br><br>
 
-    <table >
+    <table class="secao-info">
 
         <tr>
 
-            <!-- FOTO -->
-            <td>
-                <img src="images/embalagem_delivery.jpg" width="250">
-            </td>
-
             <!-- TEXTO -->
-            <td>
+            <td class="texto-info">
 
-                <font color="gold">
 
                     <h2>DELIVERY</h2>
-                </font>
-
-                <font color="black">
 
                      <p>
                         CURTA a experiência <br>
@@ -118,9 +115,14 @@
                         da sua casa.
                     </p>
 
-                </font>
 
             </td>
+
+              <!-- FOTO -->
+            <td>
+                <img src="images/embalagem_delivery.jpg" width="250">
+            </td>
+
 
         </tr>
 

@@ -1,0 +1,592 @@
+/* base do site */
+
+body{
+
+ 
+    /* remove a margem automática do navegador */
+    margin:0;
+    /* cor de fundo */
+    background-color:black;
+
+    /* define a fonte do site */
+    font-family:Arial, sans-serif;
+}
+
+/* cabeçalho */
+header{
+
+    /* fundo preto */
+     background-color:black;
+    
+    /* espaço interno */
+     padding:25px;
+}
+
+/* menu */
+/* nav a = seleciona TODOS os links do menu */
+/* nav a = ESTILO PADR]AO DOS LINKS */
+nav a{
+    /* texto branco */
+    color:white;
+    
+    /* remove o sublinhado */
+    text-decoration:none;
+    
+    /* cria espaçamento entre os links */
+    margin:25px;
+}
+
+
+/* na a:visited = CONTROLA LINKS JÁ CLICADOS - SEM ISSO O NAVEGADOR DEIXA ROXO */
+
+nav a:visited{
+
+    color:white;
+
+    text-decoration:none;
+}
+
+/* nav a:hover = QUANDO O MOUSE PASSA EM CIMA */
+nav a:hover{
+    
+
+    color:gold;
+
+    text-decoration:none;
+}
+
+/* logo */
+nav img{
+    
+     width:135px;
+
+    /* alinha a imagem com o texto */
+    vertical-align:middle;
+
+}
+
+/* centralizando o header */
+/* centraliza tabelas */
+table{
+    margin:auto;
+}
+
+/* títulos */
+h1{
+    color:gold;
+}
+
+h2{
+    color:gold;
+}
+
+/* parágrafos */
+p{
+    color:white;
+    font-size:18px;
+}
+
+
+
+/* Centraliza: links; imagem; todo conteúdo do nav */
+.menu{
+
+    text-align:center;
+}
+
+/* footer principal*/
+.footer-principal{
+
+    background-color:#f4e04d;
+    width: 100%;
+    padding:20px;
+}
+
+/* textos do footer */
+/* títulos h2 */
+.footer-principal h2{
+
+    color:rgb(13, 10, 3);
+}
+
+/* paragráfos */
+.footer-principal p{
+
+    color:black;
+}
+
+/* células td do footer */
+.footer-principal td{
+
+    text-align:center;
+
+    /* cada coluna ocupará 33% da largura */
+    /* as seções ficarão distribuídas corretamente */
+    width: 33%;
+    vertical-align:top;
+
+}
+
+
+/* A parte do copyright ficará: bege claro; separada visualmente do footer */
+.copyright{
+
+    background-color:#f5e6c8;
+    width:100%;
+    padding:20px;
+    font-size: 15px;
+}
+
+/* células do copyright*/
+.copyright td{
+    
+    text-align:center;
+
+}
+
+.banner{
+
+    background-color: #efe2a0;
+
+    text-align:center;
+
+    padding:40px;
+}
+
+.banner h2{
+
+    color: #060604;
+
+
+}
+
+.banner p{
+
+    color: #060604;
+
+}
+
+
+.banner-imagens{
+
+    /* margin:auto = faz o navegador calcular automaticamente as margens disponíveis */
+    margin:auto;
+}
+
+/* conteúdos dentro das células td */
+.banner-imagens td{
+
+    text-align:center;
+
+    padding:10px;
+}
+
+
+/* seção completa (tabela da loja, delivery etc.) */
+.secao-info{
+
+    /* margem externa:
+       40px em cima/baixo
+       auto nas laterais = centraliza a tabela */
+    margin:20px auto;
+
+    /* largura da seção:
+       ocupará 55% da largura da tela */
+    width:55%;
+
+}
+
+/* estiliza todas as células td dentro da seção */
+.secao-info td{
+
+    /* espaço interno da célula:
+       cria respiro entre texto e imagem */
+    padding:15px;
+
+    /* alinhamento vertical:
+       centraliza o conteúdo no meio da célula */
+    vertical-align:middle;
+}
+
+/* estiliza a coluna do texto */
+.texto-info{
+
+    /* alinha o texto para a direita,
+       como no layout de referência */
+    text-align:right;
+
+    /* largura da coluna de texto */
+    width:45%;
+}
+
+/* estiliza os títulos h2 dentro do texto */
+.texto-info h2{
+
+    /* cor do título */
+    color:#f4e04d;
+
+    /* tamanho da fonte */
+    font-size:28px;
+
+    /* margem inferior:
+       cria espaço entre o título e o parágrafo */
+    margin-bottom:20px;
+}
+
+/* estiliza os parágrafos da seção */
+.texto-info p{
+
+    /* cor do texto */
+    color:rgb(248, 241, 241);
+
+    /* tamanho da fonte */
+    font-size:16px;
+
+}
+
+/* personalizações exclusivas da página contato */
+.contato-info{
+
+    width: 100%;
+    background-color: #efe2a0;
+
+    
+}
+
+.contato-info h2{
+
+    color:#91751c;
+}
+
+.contato-info p{
+
+    color:black;
+}
+
+
+.titulo-cardapio{
+
+    /* define a largura da faixa do título:
+       ocupará 70% da tela */
+    width:70%;
+
+    /* margem externa:
+       40px em cima
+       auto = centraliza horizontalmente
+       30px embaixo */
+    margin:40px auto 30px auto;
+
+    background-color:#e9d432;
+}
+
+/* estiliza o conteúdo td dentro do título */
+.titulo-cardapio h2{
+
+    color:black;
+
+    font-size:26px;
+
+    /* deixa o texto em negrito */
+    font-weight:bold;
+
+    padding:15px;
+
+    text-align:left;
+}
+
+/* tabela dos produtos */
+.cardapio-produtos{
+
+    /* largura da tabela:
+       ocupará 70% da tela */
+    width:70%;
+
+    /* centraliza a tabela na página
+       e cria 50px abaixo */
+    margin:0 auto 50px auto;
+
+    /* cria espaço entre as células */
+    border-spacing:30px;
+}
+
+/* cada produto (cada célula td */
+.cardapio-produtos td{
+
+    /* cada produto ocupará 1/3 da linha
+       (máximo 3 produtos por linha) */
+    width:33%;
+
+    /* alinha o conteúdo no topo da célula */
+    vertical-align:top;
+}
+
+
+/* imagens dos produtos */
+.cardapio-produtos img{
+
+    /* faz a imagem ocupar toda a largura
+       disponível da célula */
+    width:100%;
+
+    /* altura fixa para padronizar */
+    height:200px;
+
+    /* ajusta a imagem sem deformar */
+    object-fit:cover;
+}
+
+
+.cardapio-produtos p{
+
+    color:white;
+
+    font-size:16px;
+
+    /* alinhamento do texto */
+    text-align:left;
+}
+
+/* seção do cardápio atualizado */
+.linktree-cardapio{
+
+
+    background-color:#ffe15d;
+
+    text-align:center;
+
+    /* espaço interno:
+       60px em cima/baixo
+       20px laterais */
+    padding:30px 20px;
+}
+
+
+.linktree-cardapio h2{
+
+    color:#050502;
+
+    font-size:20px;
+
+    /* negrito */
+    font-weight:bold;
+
+    /* remove margens padrão */
+    margin:0 0 20px 0;
+}
+
+/* texto da descrição */
+.linktree-cardapio p{
+
+    color:#000000;
+
+    font-size:15px;
+
+    /* espaço abaixo do texto */
+    margin-bottom:30px;
+}
+
+
+/* botão */
+.linktree-cardapio button{
+
+
+    background-color:rgb(0, 0, 0);
+
+
+    color:#ffe15d;
+
+    /* remove borda padrão */
+    border:none;
+
+    padding:18px 35px;
+
+    font-size:15px;
+
+    /* negrito */
+    font-weight:bold;
+
+    /* deixa o cursor de mãozinha */
+    cursor:pointer;
+
+    /* cantos arredondados */
+    border-radius:10px;
+}
+
+
+
+/* efeito ao passar o mouse */
+.linktree-cardapio button:hover{
+
+    background-color:#f6f5c1;
+}
+
+/* títulos das seções da página (nossa história e antes do burger do chef) */
+.titulo-nos{
+
+    /* centraliza o texto */
+    text-align:center;
+
+    /* cor do texto */
+    color:#f4e04d;
+
+    /* tamanho da fonte */
+    font-size:36px;
+
+    /* espaço abaixo do título */
+    margin-bottom:50px;
+}
+
+/* seções com texto + imagem */
+.secao-revista{
+
+    /* largura da tabela */
+    width:70%;
+
+    /* centraliza a seção */
+    margin:40px auto;
+}
+
+/* células da seção */
+.secao-revista td{
+
+    /* cada lado ocupará metade da seção */
+    width:50%;
+
+    /* espaço interno */
+    padding:25px;
+
+    /* centraliza verticalmente */
+    vertical-align:middle;
+}
+
+
+/* imagens das seções  */
+.secao-revista img{
+
+    /* ocupa toda a célula */
+    width:100%;
+    
+        /* altura fixa para padronizar */
+    height:356px;
+
+    /* ajusta a imagem sem deformar */
+    object-fit:cover;
+}
+
+
+/* regra específica da imagem da terceira seção */
+
+.secao-revista img.imagem-historia{
+    width:100%;
+    height:500px;
+    object-fit:cover;
+    object-position:center;
+}
+
+/* textos da história */
+.texto-revista{
+
+    /* alinhamento do texto */
+    text-align:right;
+}
+
+/* subtítulos internos das seções */
+.texto-revista h3{
+
+    /* cor do texto */
+    color:#f3db05;
+
+    /* tamanho da fonte */
+    font-size:30px;
+}
+
+/* parágrafos da história */
+.texto-revista p{
+
+    /* cor do texto */
+    color:#ffffff;
+
+    /* tamanho da fonte */
+    font-size:18px;
+}
+
+/* galeria de fotos */
+.galeria-nos{
+
+    /* largura da galeria */
+    width:70%;
+
+    /* centraliza a tabela */
+    margin:20px auto;
+
+    /* espaço entre as imagens */
+    border-spacing:30px;
+}
+
+/* células da galeria */
+.galeria-nos td{
+
+    /* cada imagem ocupa metade da linha */
+    width:50%;
+}
+
+/* imagens da galeria */
+.galeria-nos img{
+
+    /* largura total da célula */
+    width:100%;
+
+    /* altura fixa */
+    height:260px;
+
+    /* ajusta sem deformar */
+    object-fit:cover;
+}
+
+
+
+/* frase de impacto */
+.frase-nos{
+
+    /* ocupa toda a largura */
+    width:100%;
+
+    /* cor de fundo */
+    background-color:#ddcd80;
+     
+    /* coloca texto e imagem lado a lado */
+    display:flex;
+
+     /* centraliza horizontalmente, alinha logo com o texto */
+     align-items:center;
+     
+    justify-content:center;
+
+    /* espaço entre texto e logo */
+    gap:30px;
+
+    /* espaço interno */
+    padding:60px 20px;
+
+    /*margem superior e inferior */
+    margin-top:60px auto;
+}
+
+
+/* texto */
+.frase-nos p{
+
+    font-size:24px;
+    color:black;
+ 
+}
+
+
+/* logo */
+.frase-nos img{
+
+    width:150px;
+    /* mantém proporção */
+    height: 150px;
+
+}
