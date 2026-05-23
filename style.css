@@ -12,63 +12,213 @@ body{
     font-family:Arial, sans-serif;
 }
 
-/* cabeçalho */
-header{
+/* =====================================
+   CABEÇALHO PRINCIPAL
+   Controla toda a área do header
+===================================== */
 
-    /* fundo preto */
-     background-color:black;
-    
+.topo{
+
+    /* fundo preto do header */
+    background-color:black;
+
     /* espaço interno */
-     padding:25px;
+    padding:20px;
+
+    /* centraliza todo conteúdo interno */
+    text-align:center;
+
+    /* referência para elementos absolutos
+       do menu mobile */
+    position:relative;
 }
 
-/* menu */
-/* nav a = seleciona TODOS os links do menu */
-/* nav a = ESTILO PADR]AO DOS LINKS */
-nav a{
-    /* texto branco */
+
+
+/* =====================================
+   MENU PRINCIPAL (DESKTOP)
+   Organiza links + logo central
+===================================== */
+
+.menu{
+
+    /* centraliza todo conteúdo do nav */
+    text-align:center;
+}
+
+
+
+/* =====================================
+   LINKS DO MENU
+===================================== */
+
+.menu a{
+
+    /* cor padrão dos links */
     color:white;
-    
-    /* remove o sublinhado */
+
+    /* remove sublinhado */
     text-decoration:none;
-    
-    /* cria espaçamento entre os links */
+
+    /* espaçamento lateral entre links */
     margin:25px;
+
+    /* deixa o texto mais forte */
+    font-weight:bold;
+
+    /* mantém alinhamento com a logo */
+    vertical-align:middle;
 }
 
 
-/* na a:visited = CONTROLA LINKS JÁ CLICADOS - SEM ISSO O NAVEGADOR DEIXA ROXO */
 
-nav a:visited{
+/* =====================================
+   LINKS JÁ VISITADOS
+   Evita que o navegador deixe roxo
+===================================== */
+
+.menu a:visited{
 
     color:white;
 
     text-decoration:none;
 }
 
-/* nav a:hover = QUANDO O MOUSE PASSA EM CIMA */
-nav a:hover{
-    
+
+
+/* =====================================
+   EFEITO HOVER
+   Quando passa o mouse em cima
+===================================== */
+
+.menu a:hover{
 
     color:gold;
 
     text-decoration:none;
 }
 
-/* logo */
-nav img{
-    
-     width:135px;
 
-    /* alinha a imagem com o texto */
+
+/* =====================================
+   LOGO CENTRAL DO MENU
+===================================== */
+
+.menu img{
+
+    /* tamanho da logo */
+    width:135px;
+
+    /* alinha a logo com os links */
     vertical-align:middle;
-
 }
 
-/* centralizando o header */
-/* centraliza tabelas */
-table{
-    margin:auto;
+
+
+/* =====================================
+   BOTÃO HAMBÚRGUER
+   No desktop fica escondido
+===================================== */
+
+.menu-toggle{
+
+    /* escondido em telas grandes */
+    display:none;
+
+    /* remove estilos padrão */
+    background:none;
+    border:none;
+
+    /* cor do ícone */
+    color:gold;
+
+    /* tamanho do ícone */
+    font-size:32px;
+
+    /* cursor de clique */
+    cursor:pointer;
+}
+
+
+
+/* =====================================
+   RESPONSIVIDADE
+   Aplica em telas menores
+===================================== */
+
+@media (max-width:768px){
+
+
+
+    /* esconde menu inicialmente */
+    .menu{
+
+        display:none;
+
+        /* posiciona abaixo do header */
+        position:absolute;
+
+        /* distância do topo */
+        top:80px;
+
+        /* distância da direita */
+        right:20px;
+
+        /* fundo do menu aberto */
+        background-color:black;
+
+        /* espaço interno */
+        padding:20px;
+
+        /* bordas arredondadas */
+        border-radius:8px;
+
+        /* garante que fique sobre outros elementos */
+        z-index:10;
+    }
+
+
+
+    /* links do menu mobile */
+    .menu a{
+
+        /* um abaixo do outro */
+        display:block;
+
+        /* espaçamento vertical */
+        margin:15px 0;
+    }
+
+
+
+    /* logo menor no celular */
+    .menu img{
+
+        width:90px;
+
+        margin:10px 0;
+    }
+
+
+
+    /* botão aparece no mobile */
+    .menu-toggle{
+
+        display:block;
+
+        /* joga para direita */
+        margin-left:auto;
+    }
+
+
+
+    /* quando JS adiciona classe ativo,
+       o menu aparece */
+    .menu.ativo{
+
+        display:block;
+    }
+
 }
 
 /* títulos */
@@ -86,13 +236,6 @@ p{
     font-size:18px;
 }
 
-
-
-/* Centraliza: links; imagem; todo conteúdo do nav */
-.menu{
-
-    text-align:center;
-}
 
 /* footer principal*/
 .footer-principal{
@@ -144,16 +287,40 @@ p{
 
 }
 
+/* imagem principal da home */
+.hero-home{
+
+    /* faz a imagem ocupar toda a largura da tela */
+    width:100%;
+
+    /* define a altura da imagem */
+    height:500px;
+
+    /* evita deformação */
+    object-fit:cover;
+
+    /* centraliza o enquadramento */
+    object-position:center;
+
+    /* remove espaços indesejados */
+    display:block;
+
+    margin-bottom: 40px;
+}
+
 .banner{
 
+    height: 650px;
     background-color: #efe2a0;
 
     text-align:center;
 
-    padding:40px;
+    padding:20px;
 }
 
 .banner h2{
+
+    margin-bottom: 25;
 
     color: #060604;
 
@@ -162,13 +329,13 @@ p{
 
 .banner p{
 
+    margin-bottom: 20px;
     color: #060604;
 
 }
 
 
 .banner-imagens{
-
     /* margin:auto = faz o navegador calcular automaticamente as margens disponíveis */
     margin:auto;
 }
@@ -181,19 +348,35 @@ p{
     padding:10px;
 }
 
+/* IMAGENS */
+.banner-imagens img{
+
+    /* largura fixa para padronizar */
+    width:280px;
+
+    /* altura fixa */
+    height:220px;
+
+    /* evita deformação */
+    object-fit:cover;
+
+    /* cantos levemente arredondados */
+    border-radius:8px;
+}
+
+
 
 /* seção completa (tabela da loja, delivery etc.) */
 .secao-info{
 
-    /* margem externa:
-       40px em cima/baixo
-       auto nas laterais = centraliza a tabela */
-    margin:20px auto;
-
-    /* largura da seção:
+      /* largura da seção:
        ocupará 55% da largura da tela */
-    width:55%;
+    width:75%;
 
+    /* margem externa:
+       3px em cima/baixo
+       auto nas laterais = centraliza a tabela */
+    margin:3px auto;
 }
 
 /* estiliza todas as células td dentro da seção */
@@ -201,22 +384,27 @@ p{
 
     /* espaço interno da célula:
        cria respiro entre texto e imagem */
-    padding:15px;
+    padding:10px;
 
     /* alinhamento vertical:
        centraliza o conteúdo no meio da célula */
     vertical-align:middle;
 }
 
+.secao-info img{
+    width:390px;
+    height:490px;
+    object-fit:cover;
+}
+
 /* estiliza a coluna do texto */
 .texto-info{
 
-    /* alinha o texto para a direita,
+    /* largura da coluna de texto */
+    width:48%;
+      /* alinha o texto para a direita,
        como no layout de referência */
     text-align:right;
-
-    /* largura da coluna de texto */
-    width:45%;
 }
 
 /* estiliza os títulos h2 dentro do texto */
@@ -226,7 +414,7 @@ p{
     color:#f4e04d;
 
     /* tamanho da fonte */
-    font-size:28px;
+    font-size:30px;
 
     /* margem inferior:
        cria espaço entre o título e o parágrafo */
@@ -240,7 +428,7 @@ p{
     color:rgb(248, 241, 241);
 
     /* tamanho da fonte */
-    font-size:16px;
+    font-size:17px;
 
 }
 
@@ -249,13 +437,15 @@ p{
 
     width: 100%;
     background-color: #efe2a0;
+    margin:0 auto;
+    padding:40px 0;
 
     
 }
 
 .contato-info h2{
 
-    color:#91751c;
+    color:#b89110;
 }
 
 .contato-info p{
@@ -263,88 +453,114 @@ p{
     color:black;
 }
 
+/* mapa da página contato */
+.mapa-contato iframe{
+    width:72%;
+    height:350px;
+}
+
+/* bloco com fundo da fachada */
+.bloco-fachada{
+    background-color:#efe2a0;
+    
+    padding:0 0 60px 0;
+
+    /* remove espaços externos */
+    /* margin:0; */
+
+    /* cria espaço EXTERNO antes do footer */
+    margin-bottom:50px;
+}
+
+/* imagem da fachada abaixo do mapa */
+.fachada-contato{
+
+    /* transforma a imagem em bloco
+       para permitir centralização */
+    display:block;
+
+    width:70%;
+
+    height:650px;
+
+      /* ajusta a imagem sem deformar,
+       recortando quando necessário */
+    object-fit:cover;
+
+    /* remove margens externas */
+    margin:0 auto;
+}
+
 
 .titulo-cardapio{
 
-    /* define a largura da faixa do título:
-       ocupará 70% da tela */
     width:70%;
 
-    /* margem externa:
-       40px em cima
-       auto = centraliza horizontalmente
-       30px embaixo */
-    margin:40px auto 30px auto;
+    /* antes: 40px auto 30px auto */
+    /* menos espaço em cima e embaixo */
+    margin:35px auto 12px auto;
 
     background-color:#e9d432;
 }
 
-/* estiliza o conteúdo td dentro do título */
 .titulo-cardapio h2{
 
     color:black;
 
-    font-size:26px;
+    /* um pouco menor */
+    font-size:25px;
 
-    /* deixa o texto em negrito */
     font-weight:bold;
 
+    /* menos altura interna */
     padding:15px;
 
-    text-align:left;
+    text-align:center;
+
+    padding-left:20px;
 }
+
 
 /* tabela dos produtos */
 .cardapio-produtos{
 
-    /* largura da tabela:
-       ocupará 70% da tela */
-    width:70%;
+    width:60%;
 
-    /* centraliza a tabela na página
-       e cria 50px abaixo */
-    margin:0 auto 50px auto;
+    /* antes: 0 auto 50px auto */
+    margin:0 auto 25px auto;
 
-    /* cria espaço entre as células */
+    /* antes: 30px */
     border-spacing:30px;
 }
 
-/* cada produto (cada célula td */
-.cardapio-produtos td{
 
-    /* cada produto ocupará 1/3 da linha
-       (máximo 3 produtos por linha) */
-    width:33%;
-
-    /* alinha o conteúdo no topo da célula */
-    vertical-align:top;
-}
-
-
-/* imagens dos produtos */
+/* imagens */
 .cardapio-produtos img{
 
-    /* faz a imagem ocupar toda a largura
-       disponível da célula */
     width:100%;
 
-    /* altura fixa para padronizar */
-    height:200px;
+    height:290px;
 
-    /* ajusta a imagem sem deformar */
     object-fit:cover;
+
+    border-radius:10px;
 }
 
+.cardapio-produtos h3{
+    color:#e9d432;
+    font-size:20px;
+    font-weight:bold;
+    margin-top:16px;
+    margin-bottom:14px;
+}
 
 .cardapio-produtos p{
-
     color:white;
-
     font-size:16px;
-
-    /* alinhamento do texto */
-    text-align:left;
+    line-height:1.5;
+    margin:0;
 }
+
 
 /* seção do cardápio atualizado */
 .linktree-cardapio{
@@ -357,7 +573,8 @@ p{
     /* espaço interno:
        60px em cima/baixo
        20px laterais */
-    padding:30px 20px;
+    padding:30px 50px;
+    margin: 70px auto ;
 }
 
 
@@ -386,36 +603,35 @@ p{
 }
 
 
-/* botão */
-.linktree-cardapio button{
+.botao-linktree{
 
+    /* transforma o link em botão */
+    display:inline-block;
 
+    /* cor de fundo */
     background-color:rgb(0, 0, 0);
 
-
+    /* cor do texto */
     color:#ffe15d;
 
-    /* remove borda padrão */
-    border:none;
+    /* remove sublinhado */
+    text-decoration:none;
 
+    /* espaço interno */
     padding:18px 35px;
 
-    font-size:15px;
+    /* bordas arredondadas */
+    border-radius:8px;
 
-    /* negrito */
+    /* negrito*/
     font-weight:bold;
 
-    /* deixa o cursor de mãozinha */
+     /* deixa o cursor de mãozinha */
     cursor:pointer;
-
-    /* cantos arredondados */
-    border-radius:10px;
 }
 
-
-
 /* efeito ao passar o mouse */
-.linktree-cardapio button:hover{
+.botao-linktree:hover{
 
     background-color:#f6f5c1;
 }
@@ -426,7 +642,7 @@ p{
     /* centraliza o texto */
     text-align:center;
 
-    /* cor do texto */
+    /* cor do título */
     color:#f4e04d;
 
     /* tamanho da fonte */
@@ -442,11 +658,11 @@ p{
     /* largura da tabela */
     width:70%;
 
-    /* centraliza a seção */
+    /* centraliza horizontalmente*/
     margin:40px auto;
 }
 
-/* células da seção */
+/* células da tabela */
 .secao-revista td{
 
     /* cada lado ocupará metade da seção */
@@ -463,7 +679,7 @@ p{
 /* imagens das seções  */
 .secao-revista img{
 
-    /* ocupa toda a célula */
+    /* ocupa toda a largura célula */
     width:100%;
     
         /* altura fixa para padronizar */
@@ -478,19 +694,19 @@ p{
 
 .secao-revista img.imagem-historia{
     width:100%;
-    height:500px;
+    height:600px;
     object-fit:cover;
     object-position:center;
 }
 
-/* textos da história */
+/* bloco de texto */
 .texto-revista{
 
     /* alinhamento do texto */
     text-align:right;
 }
 
-/* subtítulos internos das seções */
+/* subtítulos internos */
 .texto-revista h3{
 
     /* cor do texto */
@@ -498,9 +714,13 @@ p{
 
     /* tamanho da fonte */
     font-size:30px;
+
+    
+    /* espaço abaixo */
+    margin-bottom:20px;
 }
 
-/* parágrafos da história */
+/* parágrafos */
 .texto-revista p{
 
     /* cor do texto */
@@ -510,38 +730,51 @@ p{
     font-size:18px;
 }
 
-/* galeria de fotos */
-.galeria-nos{
+/* carrossel de fotos */
 
-    /* largura da galeria */
+.carrossel{
+
+    /* largura do carrossel */
     width:70%;
 
-    /* centraliza a tabela */
-    margin:20px auto;
-
-    /* espaço entre as imagens */
-    border-spacing:30px;
-}
-
-/* células da galeria */
-.galeria-nos td{
-
-    /* cada imagem ocupa metade da linha */
-    width:50%;
-}
-
-/* imagens da galeria */
-.galeria-nos img{
-
-    /* largura total da célula */
-    width:100%;
-
     /* altura fixa */
-    height:260px;
+    height:500px;
+
+    /* centraliza */
+    margin:50px auto;
+
+    /* necessário para o efeito */
+    position:relative;
+
+    /* esconde imagens extras */
+    overflow:hidden;
+}
+
+/* imagens do carrossel */
+.slide{
+
+    /* ocupa todo o espaço */
+    width:100%;
+    height:100%;
 
     /* ajusta sem deformar */
     object-fit:cover;
+
+    /* coloca todas as imagens empilhadas dentro do mesmo carrosel */
+    position:absolute;
+    top:0;
+    left:0;
+    
+    /* esconde inicialmente */
+    display:none;
 }
+
+/* imagem visível */
+.slide.ativo{
+
+    display:block;
+}
+
 
 
 
@@ -566,27 +799,31 @@ p{
     gap:30px;
 
     /* espaço interno */
-    padding:60px 20px;
+    padding:40px 20px;
 
     /*margem superior e inferior */
     margin-top:60px auto;
+
+    /* cria espaço EXTERNO antes do footer */
+    margin-bottom:50px;
+
 }
 
 
 /* texto */
 .frase-nos p{
 
-    font-size:24px;
+    font-size:28px;
     color:black;
- 
 }
 
 
 /* logo */
 .frase-nos img{
 
-    width:150px;
+    width:200px;
     /* mantém proporção */
-    height: 150px;
-
+    height:200px;
 }
+
+
