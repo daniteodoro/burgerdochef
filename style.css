@@ -22,8 +22,8 @@ body{
     /* fundo preto do header */
     background-color:black;
 
-    /* espaço interno */
-    padding:20px;
+    /* reduz a altura do header */
+    padding:10px 20px;
 
     /* centraliza todo conteúdo interno */
     text-align:center;
@@ -107,7 +107,7 @@ body{
 .menu img{
 
     /* tamanho da logo */
-    width:135px;
+    width:130px;
 
     /* alinha a logo com os links */
     vertical-align:middle;
@@ -117,7 +117,7 @@ body{
 
 /* =====================================
    BOTÃO HAMBÚRGUER
-   No desktop fica escondido
+   Fica oculto no desktop
 ===================================== */
 
 .menu-toggle{
@@ -125,100 +125,109 @@ body{
     /* escondido em telas grandes */
     display:none;
 
-    /* remove estilos padrão */
+    /* remove aparência padrão */
     background:none;
     border:none;
 
-    /* cor do ícone */
-    color:gold;
+    /* cursor de clique */
+    cursor:pointer;
+
+    /* espaço interno */
+    padding:5px;
+
+    /* remove contorno azul ao clicar */
+    outline:none;
+}
+
+
+/* =====================================
+   ÍCONE FONT AWESOME
+===================================== */
+
+.menu-toggle i{
+
+    /* cor dourada padrão */
+    color:#e9d432;
 
     /* tamanho do ícone */
     font-size:32px;
 
-    /* cursor de clique */
-    cursor:pointer;
+    /* animação suave */
+    transition:0.3s ease;
 }
 
+
+/* =====================================
+   EFEITO HOVER
+===================================== */
+
+.menu-toggle:hover i{
+
+    color:white;
+}
 
 
 /* =====================================
    RESPONSIVIDADE
-   Aplica em telas menores
 ===================================== */
 
 @media (max-width:768px){
 
-
-
-    /* esconde menu inicialmente */
+    /* menu fechado inicialmente */
     .menu{
 
         display:none;
 
-        /* posiciona abaixo do header */
         position:absolute;
 
-        /* distância do topo */
         top:80px;
 
-        /* distância da direita */
         right:20px;
 
-        /* fundo do menu aberto */
         background-color:black;
 
-        /* espaço interno */
         padding:20px;
 
-        /* bordas arredondadas */
         border-radius:8px;
 
-        /* garante que fique sobre outros elementos */
         z-index:10;
+
+        box-shadow:0 0 15px rgba(0,0,0,0.4);
     }
 
 
-
-    /* links do menu mobile */
+    /* links do menu */
     .menu a{
 
-        /* um abaixo do outro */
         display:block;
 
-        /* espaçamento vertical */
         margin:15px 0;
+
+        text-align:center;
     }
 
 
-
-    /* logo menor no celular */
+    /* esconde a logo dentro do menu mobile */
     .menu img{
 
-        width:90px;
-
-        margin:10px 0;
+        display:none;
     }
 
 
-
-    /* botão aparece no mobile */
+    /* mostra botão no celular */
     .menu-toggle{
 
         display:block;
 
-        /* joga para direita */
         margin-left:auto;
     }
 
 
-
-    /* quando JS adiciona classe ativo,
-       o menu aparece */
+    /* menu aberto */
     .menu.ativo{
 
         display:block;
     }
-
 }
 
 /* títulos */
@@ -240,7 +249,7 @@ p{
 /* footer principal*/
 .footer-principal{
 
-    background-color:#f4e04d;
+    background-color:#ffe734;
     width: 100%;
     padding:20px;
 }
@@ -270,11 +279,46 @@ p{
 
 }
 
+/* link clicável da rede social */
+.link-social{
+
+    /* remove sublinhado do link */
+    text-decoration:none;
+
+    /* espaço entre os ícones */
+    margin:15px;
+}
+
+
+/* ícones das redes sociais */
+.icone-social{
+
+    /* cor dos ícones */
+    color:black;
+
+    /* tamanho */
+    font-size:42px;
+
+    /* suaviza animações */
+    transition:0.3s;
+}
+
+
+/* efeito ao passar o mouse */
+.icone-social:hover{
+
+    /* aumenta levemente */
+    transform:scale(1.15);
+
+    /* muda a cor */
+    color:white;
+}
+
 
 /* A parte do copyright ficará: bege claro; separada visualmente do footer */
 .copyright{
 
-    background-color:#f5e6c8;
+    background-color:#fdf2b3;
     width:100%;
     padding:20px;
     font-size: 15px;
@@ -294,7 +338,7 @@ p{
     width:100%;
 
     /* define a altura da imagem */
-    height:500px;
+    height:600px;
 
     /* evita deformação */
     object-fit:cover;
@@ -305,13 +349,16 @@ p{
     /* remove espaços indesejados */
     display:block;
 
-    margin-bottom: 40px;
+    /* espaço entre header e imagem */
+    
+    margin:10px auto 40px auto;
+
 }
 
 .banner{
 
     height: 650px;
-    background-color: #efe2a0;
+    background-color: #eede89;
 
     text-align:center;
 
@@ -395,6 +442,8 @@ p{
     width:390px;
     height:490px;
     object-fit:cover;
+    /* cantos levemente arredondados */
+    border-radius:8px;
 }
 
 /* estiliza a coluna do texto */
@@ -411,7 +460,7 @@ p{
 .texto-info h2{
 
     /* cor do título */
-    color:#f4e04d;
+    color:#fae126;
 
     /* tamanho da fonte */
     font-size:30px;
@@ -436,7 +485,7 @@ p{
 .contato-info{
 
     width: 100%;
-    background-color: #efe2a0;
+    background-color: #000000;
     margin:0 auto;
     padding:40px 0;
 
@@ -445,23 +494,25 @@ p{
 
 .contato-info h2{
 
-    color:#b89110;
+    color:#f4e04d;
 }
 
 .contato-info p{
 
-    color:black;
+    color:rgb(254, 254, 254);
 }
 
 /* mapa da página contato */
 .mapa-contato iframe{
     width:72%;
     height:350px;
+     /* cantos levemente arredondados */
+    border-radius:8px;
 }
 
 /* bloco com fundo da fachada */
 .bloco-fachada{
-    background-color:#efe2a0;
+    background-color:#000000;
     
     padding:0 0 60px 0;
 
@@ -489,18 +540,22 @@ p{
 
     /* remove margens externas */
     margin:0 auto;
+     background-color:#000000;
+
+          /* cantos levemente arredondados */
+    border-radius:8px;
 }
 
 
 .titulo-cardapio{
 
-    width:70%;
+    width:60%;
 
     /* antes: 40px auto 30px auto */
     /* menos espaço em cima e embaixo */
-    margin:35px auto 12px auto;
+    margin:25px auto 10px auto;
 
-    background-color:#e9d432;
+    background-color:#ffe836;
 }
 
 .titulo-cardapio h2{
@@ -513,7 +568,7 @@ p{
     font-weight:bold;
 
     /* menos altura interna */
-    padding:15px;
+    padding:12px;
 
     text-align:center;
 
@@ -527,7 +582,7 @@ p{
     width:60%;
 
     /* antes: 0 auto 50px auto */
-    margin:0 auto 25px auto;
+    margin:0 auto 15px auto;
 
     /* antes: 30px */
     border-spacing:30px;
@@ -566,7 +621,7 @@ p{
 .linktree-cardapio{
 
 
-    background-color:#ffe15d;
+    background-color:#fcde7b;
 
     text-align:center;
 
@@ -574,7 +629,10 @@ p{
        60px em cima/baixo
        20px laterais */
     padding:30px 50px;
-    margin: 70px auto ;
+
+        /* remove o espaço entre header e seção */
+    margin:10px auto 40px auto;
+   
 }
 
 
@@ -649,7 +707,7 @@ p{
     font-size:36px;
 
     /* espaço abaixo do título */
-    margin-bottom:50px;
+    margin:10px auto 20px auto;
 }
 
 /* seções com texto + imagem */
@@ -659,7 +717,7 @@ p{
     width:70%;
 
     /* centraliza horizontalmente*/
-    margin:40px auto;
+    margin:20px auto;
 }
 
 /* células da tabela */
@@ -687,6 +745,8 @@ p{
 
     /* ajusta a imagem sem deformar */
     object-fit:cover;
+     /* cantos levemente arredondados */
+    border-radius:8px;
 }
 
 
@@ -729,53 +789,6 @@ p{
     /* tamanho da fonte */
     font-size:18px;
 }
-
-/* carrossel de fotos */
-
-.carrossel{
-
-    /* largura do carrossel */
-    width:70%;
-
-    /* altura fixa */
-    height:500px;
-
-    /* centraliza */
-    margin:50px auto;
-
-    /* necessário para o efeito */
-    position:relative;
-
-    /* esconde imagens extras */
-    overflow:hidden;
-}
-
-/* imagens do carrossel */
-.slide{
-
-    /* ocupa todo o espaço */
-    width:100%;
-    height:100%;
-
-    /* ajusta sem deformar */
-    object-fit:cover;
-
-    /* coloca todas as imagens empilhadas dentro do mesmo carrosel */
-    position:absolute;
-    top:0;
-    left:0;
-    
-    /* esconde inicialmente */
-    display:none;
-}
-
-/* imagem visível */
-.slide.ativo{
-
-    display:block;
-}
-
-
 
 
 /* frase de impacto */
